@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Share 3D from UGScan</title>
 	<meta charset="utf-8">
@@ -80,6 +81,7 @@
 
 
 	<script type="module">
+
 		import * as THREE from 'three';
 		import { MTLLoader, OBJLoader, UGBLoader, OrbitControls, UGCloud } from './dist/ugscan.min.js';
 
@@ -124,7 +126,7 @@
 			cloud.loadFromID(id, function (title) {
 
 				if (null != title) {
-					document.title = title + " - Share 3D from UGScan";
+					document.title = title
 					progressText.textContent = `Loading...`;
 				}
 
@@ -174,10 +176,10 @@
 			scene = new THREE.Scene();
 			scene.background = new THREE.Color(0x202020);
 
-			const ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
+			const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 			scene.add(ambientLight);
 
-			const pointLight = new THREE.PointLight(0xffffff, 1.0);
+			const pointLight = new THREE.PointLight(0xffffff, 2.5);
 			camera.add(pointLight);
 			scene.add(camera);
 
