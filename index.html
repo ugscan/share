@@ -51,10 +51,10 @@
 </style>
 
 <body>
-	<div style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%);">
+	<div style="position: fixed; bottom: 50px; left: 50%; transform: translateX(-50%);">
 		<a href="https://apps.apple.com/app/ugscan-lidar-scanner/id1635980027" target="_blank" rel="noopener">
 			<div
-				style="display: inline-block; background-color: rgba(127, 127, 255, 0.6); color: white; padding: 8px 20px; border-radius: 5px; text-align: center;">
+				style="display: inline-block; background-color: rgba(127, 127, 255, 0.6); color: white; padding: 10px 20px; border-radius: 5px; text-align: center;">
 				<span
 					style="display: inline-block; vertical-align: middle; line-height: normal; font-weight: bold;">Install
 					UGScan</span>
@@ -83,7 +83,7 @@
 	<script type="module">
 
 		import * as THREE from 'three';
-		import { MTLLoader, OBJLoader, UGBLoader, OrbitControls, UGCloud, XRButton, XRControllerModelFactory } from './dist/ugscan.min.js';
+		import { MTLLoader, OBJLoader, UGBLoader, OrbitControls, UGCloud } from './dist/ugscan.min.js';
 
 		let camera, scene, renderer, controls;
 		let cloud;
@@ -192,8 +192,6 @@
 			// Init UGCloud
 			cloud = new UGCloud(scene);
 			cloud.initConfig(dev);
-
-			// document.body.appendChild( XRButton.createButton( renderer ) );
 		}
 
 		function onWindowResize() {
